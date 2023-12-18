@@ -1,0 +1,7 @@
+type Query {
+  stocks(func: String!, symbol: String!): Stocks
+}
+
+type Stocks {
+  data: String!
+}

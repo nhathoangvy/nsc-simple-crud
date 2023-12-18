@@ -1,0 +1,17 @@
+version: '1'
+
+services:
+  app:
+    image: node:alpine
+    expose:
+      - 3000
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    working_dir: /app
+    environment:
+      NODE_ENV: development
+      API_KEY: demo
+    ports:
+      - 3000:3000
+    command: npm run start:prod
