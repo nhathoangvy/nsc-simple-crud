@@ -3,9 +3,6 @@ import { StockResolver } from './stock.resolver';
 import { StockService } from './stock.service';
 
 @Module({
-  providers: [
-    StockService,
-    StockResolver,
-  ],
+  providers: [StockService, StockResolver],
 })
 export class StockModule {}

@@ -15,5 +15,4 @@ export class StockResolver {
   ) {
     return this.stockService.query(func as FUNCTION, symbol);
   }
-
 }

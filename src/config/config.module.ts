@@ -1,16 +1,14 @@
-import { Global, Module } from '@nestjs/common'
-import { ConfigModule } from '@nestjs/config'
-import { AppConfigService } from './config.service'
-import systemConfig from './environments/system'
+import { Global, Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { AppConfigService } from './config.service';
+import systemConfig from './environments/system';
 
 @Global()
 @Module({
   imports: [
     ConfigModule.forRoot({
       cache: true,
-      load: [
-        systemConfig
-      ],
+      load: [systemConfig],
     }),
   ],
   providers: [AppConfigService],

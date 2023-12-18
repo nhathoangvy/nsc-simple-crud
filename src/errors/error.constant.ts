@@ -3,5 +3,5 @@ export const error = {
   401: 'Unauthorized',
   403: 'Forbidden',
   404: 'Not found',
-  500: 'Server error'
-}
+  500: 'Server error',
+};

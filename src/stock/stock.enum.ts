@@ -8,7 +8,7 @@ export enum FUNCTION {
   TIME_SERIES_MONTHLY_ADJUSTED = 'TIME_SERIES_MONTHLY_ADJUSTED',
   GLOBAL_QUOTE = 'GLOBAL_QUOTE',
   SYMBOL_SEARCH = 'SYMBOL_SEARCH',
-  MARKET_STATUS = 'MARKET_STATUS'
+  MARKET_STATUS = 'MARKET_STATUS',
 }
 
 export enum INTERVAL_INTRADAY {
@@ -16,10 +16,10 @@ export enum INTERVAL_INTRADAY {
   FIVE_MIN = '5min',
   FITEEN_MIN = '15min',
   THIRTY_MIN = '30min',
-  HOUR = '60min'
+  HOUR = '60min',
 }
 
 export enum DATA_TYPE {
   JSON = 'json',
-  CSV = 'csv'
+  CSV = 'csv',
 }

@@ -1,12 +1,12 @@
-import { ConfigModule } from '@nestjs/config'
-import { Test, TestingModule } from '@nestjs/testing'
+import { ConfigModule } from '@nestjs/config';
+import { Test, TestingModule } from '@nestjs/testing';
 
-import { getTestingGlobalModule } from '../shared/test/util'
-import { AppConfigService } from './config.service'
-import systemConfig from './environments/system'
+import { getTestingGlobalModule } from '../shared/test/util';
+import { AppConfigService } from './config.service';
+import systemConfig from './environments/system';
 
 describe('ConfigService', () => {
-  let service: AppConfigService
+  let service: AppConfigService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule(
@@ -14,20 +14,18 @@ describe('ConfigService', () => {
         imports: [
           ConfigModule.forRoot({
             cache: true,
-            load: [
-              systemConfig
-            ],
+            load: [systemConfig],
           }),
         ],
         providers: [AppConfigService],
       }),
-    ).compile()
+    ).compile();
 
-    service = module.get<AppConfigService>(AppConfigService)
-  })
+    service = module.get<AppConfigService>(AppConfigService);
+  });
 
   it('should be defined and contains correct data', () => {
-    expect(service).toBeDefined()
-    expect(service.system).toEqual(systemConfig())
-  })
-})
+    expect(service).toBeDefined();
+    expect(service.system).toEqual(systemConfig());
+  });
+});

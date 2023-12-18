@@ -7,5 +7,4 @@ async function bootstrap() {
   await app.listen(3000);
 }
 
-// AppClusterService.clusterize(bootstrap);
-bootstrap()
+AppClusterService.clusterize(bootstrap);

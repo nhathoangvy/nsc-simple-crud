@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common'
-import { ConfigService, ConfigType } from '@nestjs/config'
-import * as systemConfig from './environments/system'
+import { Injectable } from '@nestjs/common';
+import { ConfigService, ConfigType } from '@nestjs/config';
+import * as systemConfig from './environments/system';
 
 @Injectable()
 export class AppConfigService {
@@ -10,6 +10,6 @@ export class AppConfigService {
     return this.configService.get<ConfigType<typeof systemConfig.default>>(
       systemConfig.CONFIG_NAME,
       systemConfig.default(),
-    )
+    );
   }
 }

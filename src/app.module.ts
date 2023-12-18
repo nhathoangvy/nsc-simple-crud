@@ -15,6 +15,6 @@ import { AppConfigModule } from './config/config.module';
       typePaths: ['./**/*.graphql'],
       installSubscriptionHandlers: true,
     }),
-  ]
+  ],
 })
 export class AppModule {}
